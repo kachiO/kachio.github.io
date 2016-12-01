@@ -9,10 +9,12 @@ github_username:  kachio
 
 # Build settings
 markdown: kramdown
-permalink: pretty
+#permalink: pretty
 
 highlighter: rouge
 kramdown:
   input: GFM
   auto_ids: true
   syntax_highlighter: rouge
+  
+permalink: /blog/:year/:month/:day/:title
