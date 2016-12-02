@@ -11,8 +11,9 @@ this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your pag
 };
 */
 (function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
+var d = document, s = d.createElement('script'); s.type = 'text/javascript'; s.async = true;
 s.src = '//kachio-github-io.disqus.com/embed.js';
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
 s.setAttribute('data-timestamp', +new Date());
 (d.head || d.body).appendChild(s);
 })();
