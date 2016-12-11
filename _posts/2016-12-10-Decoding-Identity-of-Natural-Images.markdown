@@ -90,7 +90,7 @@ There are several possible explanations for the V1 advantage. V1 is a low-level 
 Other potential explanation for V1's high accuracy in image identification and avenues for future work include:
 
 <ul type="circle">
-    <li>More high firing rate neurons in V1, i.e. higher signal to noise. One way to address this is to infer spike events using available <a href="https://scholar.google.com/scholar?hl=en&q=deconvolution+calcium+imaging+&btnG=&as_sdt=1%2C5&as_sdtp=">deconvolution methods</a> to estimate the overall spike event rates per area. One could then randomly remove spikes and evaluate performance on the   natural image identity task.</li>
+    <li style=font-size:12px>More high firing rate neurons in V1, i.e. higher signal to noise. One way to address this is to infer spike events using available <a href="https://scholar.google.com/scholar?hl=en&q=deconvolution+calcium+imaging+&btnG=&as_sdt=1%2C5&as_sdtp=">deconvolution methods</a> to estimate the overall spike event rates per area. One could then randomly remove spikes and evaluate performance on the   natural image identity task.</li>
 
     <li>Smaller receptive field size of neurons. V1 typically has smaller receptive fields than other higher visual areas. I could verify this with the dataset from the [Locally Sparse Noise stimulus](http://observatory.brain-map.org/visualcoding/stimulus/locally_sparse_noise). This could be fun. </li>
 
@@ -109,11 +109,6 @@ Myers & Kreiman - [Tutorial on Pattern Classification](http://klab.tch.harvard.e
 Sashank Pisupati, Arka Banerjee, Matt Kaufman, and Anne Churchland for helpful discussions and suggestions. And also to the [Allen Institute](alleninstitute.org) for acquiring and curating this awesome dataset.
 
 
-<ul>
-   <li style="color:red;font-size:30px">Example Category</li>
-   <ul>
-     <li> text</li>
-     <li> text</li>
-    </ul>
- </ul>
+   <li style="font-size:30px">Example Category</li>
+
   
