@@ -4,7 +4,7 @@ title: "Decoding Identity of Natural Images From Mouse Visual Cortex"
 date: 2016-12-10
 ---
 
-<h1>Introduction</h1>
+<h1>Intro</h1>
 
 The [Allen Institute for Brain Science](https://www.alleninstitute.org/) recently released a [rich dataset](http://observatory.brain-map.org/visualcoding) containing neural responses from many visual brain areas and cortical layers. Here is a nice [video](https://www.youtube.com/watch?v=fSaOCDmRs1Q) introducing the [Brain Observatory project](http://observatory.brain-map.org/visualcoding).This unprecedented dataset is an important resource and testbed for generating hypotheses about visual cortical function.
 
@@ -22,6 +22,20 @@ I had to do a bit of data wrangling to extract and save the responses from diffe
 | PM   | AL   | LM   | V1   |
 |------|------|------|------|
 | 2157 | 2323 | 2606 | 4189 |
+<table>
+    <tr>
+        <th>PM</th>
+        <th>AL</th>
+        <th>LM</th>
+        <th>V1</th>
+    </tr>
+    <tr>
+        <td>2157</td>
+        <td>2323</td>
+        <td>2606</td>
+        <td>4189</td>
+    </tr>
+</table>
 
 To measure performance on identifying a natural image, I trained a linear support vector classifier ([one-vs-rest classifier scheme](https://en.wikipedia.org/wiki/Multiclass_classification#One-vs.-rest)) on the average response during 200-300ms post stimulus, and computed cross-validated test accuracy for the trained classifier for each area. The classifier was trained on 70% of the trials in an area, and tested on the remaining 30%. In most cases I repeated this procedure 10 times to obtain an average and computed the standard error of the mean (SEM).
 
@@ -33,7 +47,6 @@ The code is available on Juptyer Notebook on the Github Repo.
 Although all the visual areas performed well above chance (0.85%), V1 exhibited the highest performance (>75%) in linearly classifying the natural images, followed by area LM (>50%). Areas PM and LM performed similarly (> 30%) to each other.
 
 <center><img src="/assets/blog/natural_image_identity/Decoder_accuracy_all_neurons.png" height="400" title="Figure 1a. Natural Image Identity Performance for Each Area, all neurons included"></center>
-
 
 You might have noticed from Table 1 that each area has a different number of neurons (features), and that the best performing area V1 has the most number of neurons. In other words V1 might have outperformed other areas because it had more neurons. However, when I repeat the classifier using 2100 neurons (features) per area, V1 still outperformed all the other areas.
 
@@ -68,13 +81,13 @@ I was surprised to find that V1 outperformed all other visual areas on the natur
 
 There are several possible explanations for the V1 advantage. V1 is a low-level feature detector i.e. neurons in V1 respond well to low level features such as contrast, edges, luminance, and orientation. Although the experimenters accounted for low-level features such as contrast and luminance during stimulus presentation, V1 could still be sensitive to other low-level features such as edges or spatial frequency.
 Other potential explanation for V1's high accuracy in image identification and avenues for future work include:
-<ul><p>
+<ul type="circle">
 <li>More high firing rate neurons in V1, i.e. higher signal to noise. One way to address this is to infer spike events using available [deconvolution methods](https://scholar.google.com/scholar?hl=en&q=deconvolution+calcium+imaging+&btnG=&as_sdt=1%2C5&as_sdtp=) to estimate the overall spike event rates per area. One could then randomly remove spikes and evaluate performance on the natural image identity task.</li>
 
 <li>Smaller receptive field size of neurons. V1 typically has smaller receptive fields than other higher visual areas. I could verify this with the dataset from the [Locally Sparse Noise stimulus](http://observatory.brain-map.org/visualcoding/stimulus/locally_sparse_noise). This could be fun. </li>
 
 <li>Incomplete visual information in secondary visual areas. This is an interesting idea that has to do with the possibility that individual mouse secondary visual areas might not have complete coverage of visual space ([Garrett et al 2014](https://www.ncbi.nlm.nih.gov/pmc/articles/pmid/25209296/)), and therefore only sample a portion of the visual scene. This would suggest that combining responses from multiple secondary visual areas could outperform V1. I have not yet tested this idea, but I could run the classifier analysis combining neurons from areas LM and PM or AL and comparing the performance to V1.</li>
-</p></ul>
+</ul>
 
 The one major caveat is that it has not yet been established that there exists a mouse visual hierarchy, analogous to the way vision scientist think about the primate visual hierarchy. However several parallels do exist between the mouse and primate visual system (for review, see [Glickfeld et al 2014](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4398969/)).
 
