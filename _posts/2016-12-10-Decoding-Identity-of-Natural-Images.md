@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Decoding-Identity-of-Natural-Images-From-Mouse-Visual-Cortex"
+title: "Decoding Identity of Natural Images From Mouse Visual Cortex"
 date: 2016-12-10
 ---
 
