@@ -20,10 +20,10 @@ I had to do a bit of data wrangling to extract and save the responses from diffe
 <style>
     table {
         border-collapse: collapse;
-        width: 100%;
+        width: 70%;
     }
     th, td {
-        border: 1px solid orange;
+        border: 1px solid black;
         padding: 10px;
     }
 </style>
