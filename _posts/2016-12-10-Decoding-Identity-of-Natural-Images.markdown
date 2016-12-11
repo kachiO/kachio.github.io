@@ -58,7 +58,7 @@ The first approach (a) To evaluate the performance of the classifier across time
 <center><img src="/assets/blog/natural_image_identity/accuracy_across_time_all2.png" height="380" title="Performance across time"></center>
 
 <h2>Natural Image Categorization</h2>
-Given that neural responses in these areas can be used to perform natural image identity task. What if I, instead, now asked the visual areas to categorize the natural images into two groups? My prediction was that putative higher visual areas, such as PM or AL, would perform much better than V1. I devised two simple categories, animals vs. non-animals. Although the visual areas all performed above chance (50%), they each performed similarly, including V1.
+Given that neural responses in these areas can be used to perform natural image identity task. What if I, instead, now asked the visual areas to categorize the natural images into two groups. My prediction was that putative higher visual areas, such as PM or AL, would perform much better than V1. I devised two simple categories, animals vs. non-animals. All the areas performed above chance (50%) and the categorization performance was similar for all areas including V1. In a future extension of the project, I could assign image categories using more sophisticated approaches such as structured similarity index ([SSIM](https://en.wikipedia.org/wiki/Structural_similarity)), [perceptual distance metric](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3586997/), or neural responses correlation similarity (e.g. [representational dissimilarity metric](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2605405/)).
 
 <center><img src="/assets/blog/natural_image_identity/binary_categorization_accuracy.png" height="400" title="Animal vs Non-animal Categorization Performance"></center>
 
@@ -77,8 +77,6 @@ Other potential explanation for V1's high accuracy in image identification and a
 </p></ul>
 
 The one major caveat is that it has not yet been established that there exists a mouse visual hierarchy, analogous to the way vision scientist think about the primate visual hierarchy. However several parallels do exist between the mouse and primate visual system (for review, see [Glickfeld et al 2014](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4398969/)).
-
-Regarding the categorization task (Figure 4), performance could be improved by creating more image categories. I used a trivial categorization scheme, and there are a number of sophisticated approaches I could use to assign image categories including structured similarity index ([SSIM](https://en.wikipedia.org/wiki/Structural_similarity)), [perceptual distance metric](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3586997/), or neural responses correlation similarity (e.g. [representational dissimilarity metric](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2605405/)).
 
 In these experiments, I assessed the passive decoding of natural image identity i.e.  animals were not actively engaged in a behavioral task. My prediction is that the V1 advantage would disappear under actively-engaged task conditions.
 [Spencer Smith's lab](http://www.slslab.org/) recently showed that [mice can, behaviorally, discriminate natural images](http://www.slslab.org/nid/2016/08/11/introduction-to-this-project/). It would be interesting to compare how well each area performs on natural image identity and categorization when the animal is engaged in a behavioral task.   
