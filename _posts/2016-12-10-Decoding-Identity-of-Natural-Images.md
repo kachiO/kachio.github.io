@@ -3,9 +3,9 @@ layout: post
 title: "Decoding-Identity-of-Natural-Images-From-Mouse-Visual-Cortex"
 date: 2016-12-10
 ---
-#
-#
+
 #Introduction
+
 The [Allen Institute for Brain Science](https://www.alleninstitute.org/) recently released a [rich dataset](http://observatory.brain-map.org/visualcoding) containing neural responses from many visual brain areas and cortical layers. Here is a nice [video](https://www.youtube.com/watch?v=fSaOCDmRs1Q) introducing the [Brain Observatory project](http://observatory.brain-map.org/visualcoding).This unprecedented dataset is an important resource and testbed for generating hypotheses about visual cortical function.
 
 Mice are relatively [new players to the visual neuroscience game](http://www.nature.com/news/neuroscience-through-the-eyes-of-a-mouse-1.13901). Mice have a number of secondary visual areas which are not only retinotopic, but also have preferences for spatial and temporal frequency of grating stimuli. Beyond that very little is know about what kind of information can be readout from neural populations within mouse secondary visual areas. Linear readout (i.e. linear combinations) of neurons is an implicit assumption in systems neuroscience about how downstream brain areas *could* make use the information represented in the neural responses of upstream brain areas to generate behavior.
@@ -48,7 +48,7 @@ Another way to evaluate and compare each classifier's performance is to assess t
 
 From the normalized confusion matrix, you will notice that there is a close agreement between each area classifier's predicted class label (i.e. image identity) and the true label. The image labels (1-118) is the same for each matrix. Next time around, I would like to make an interactive plot that let's you visualize which images an area classifier predicts well.
 
-[**Figure 2b - confusion matrix and mutual information per population size**]: /assets/blog/natural_image_identity/mutual_info.png "Confusion Matrix and Mutual information "
+![**Figure 2b - confusion matrix and mutual information per population size**]: /assets/blog/natural_image_identity/mutual_info.png "Confusion Matrix and Mutual information "
 
 ###Natural Image Identity Performance Accuracy Across Time
 The next question I asked was whether different visual areas might achieve higher accuracy at different times from the stimulus onset. I found three ways to approach this question.
