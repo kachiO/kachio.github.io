@@ -17,7 +17,17 @@ I set out on a data mission to investigate whether neurons in mouse visual corte
 Mice were presented with a total of 118 natural scenes. Each scene was presented for 250mss and randomly repeated 50 times, one immediately after the other with no blank screen in between. (I thought this was a bit unusual that they would present the scenes one right after the other without a blank screen in between. Maybe they were worried about stimulus onset transients?) A blank screen, however, was presented after ever 100 scenes. More details about the experimental procedures are discussed in the [technical whitepaper](http://help.brain-map.org/display/observatory/Documentation).
 
 I had to do a bit of data wrangling to extract and save the responses from different brain areas, cell types, and scenes. I created a matrix, _XT_, of size _n_ x _c_ x _t_  where n = number of trials, c = number of cells in a visual area (or cell type), and t = time (or frames).This matrix was created for each visual area. The number of cells per area were ranged between 2157 (PM) to 4189 (V1) (see table below). There were 5900 trials total (118 images, 50 repeats each). Blank stimulus trials were excluded. The total number of frames included per cell was 21, which included 7 frames pre-stimulus, 7 frames during stimulus, and 7 frames post-stimulus. Approximately 7 imaging frames were acquired per 250ms. The analyses in this project were done using the relative changes in fluorescence (${\Delta} F/F$) as the neuronal response instead of spikes.
-
+<style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+    th, td {
+        border: 1px solid orange;
+        padding: 10px;
+    }
+</style>
+        
 <center><table>
     <tr>
         <th>PM</th>
