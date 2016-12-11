@@ -12,7 +12,8 @@ Mice are relatively [new players to the visual neuroscience game](http://www.nat
 
 I set out on a data mission to investigate whether neurons in mouse visual cortex could linearly readout (i.e. discriminate) the identity of natural images.
 
-#The Data & Methods
+<h1>The Data & Methods</h1>
+
 Mice were presented with a total of 118 natural scenes. Each scene was presented for 250mss and randomly repeated 50 times, one immediately after the other with no blank screen in between. (I thought this was a bit unusual that they would present the scenes one right after the other without a blank screen in between. Maybe they were worried about stimulus onset transients?) A blank screen, however, was presented after ever 100 scenes. More details about the experimental procedures are discussed in the [technical whitepaper](http://help.brain-map.org/display/observatory/Documentation).
 
 I had to do a bit of data wrangling to extract and save the responses from different brain areas, cell types, and scenes. I created a matrix, _XT_, of size _n_ x _c_ x _t_  where n = number of trials, c = number of cells in a visual area (or cell type), and t = time (or frames).This matrix was created for each visual area. The number of cells per area were ranged between 2157 (PM) to 4189 (V1) (see table below). There were 5900 trials total (118 images, 50 repeats each). Blank stimulus trials were excluded. The total number of frames included per cell was 21, which included 7 frames pre-stimulus, 7 frames during stimulus, and 7 frames post-stimulus. Approximately 7 imaging frames were acquired per 250ms. The analyses in this project were done using the relative changes in fluorescence (${\Delta} F/F$) as the neuronal response instead of spikes.
@@ -26,9 +27,9 @@ To measure performance on identifying a natural image, I trained a linear suppor
 
 The code is available on Juptyer Notebook on the Github Repo.
 
-#Results
+<h1>Results</h1>
 
-###Primary Visual Cortex (V1) Achieved Highest Performance on Natural Image Identity Task
+<h3>Primary Visual Cortex (V1) Achieved Highest Performance on Natural Image Identity Task</h3>
 Although all the visual areas performed well above chance (0.85%), V1 exhibited the highest performance (>75%) in linearly classifying the natural images, followed by area LM (>50%). Areas PM and LM performed similarly (> 30%) to each other.
 
 [**Figure 1a.**]: /assets/blog/natural_image_identity/Decoder_accuracy_all_neurons.png "Natural Image Identity Performance for Each Area, all neurons included"
@@ -39,7 +40,7 @@ You might have noticed from Table 1 that each area has a different number of neu
 [**Figure 1b.**]: /assets/blog/natural_image_identity/Decoder_accuracy_2100_neurons.png "Natural Image Identity Performance for Each Area, 2100 neurons included"
 
 
-###Natural Image Identity Performance Increases With Population Size for All Visual Areas
+<h3>Natural Image Identity Performance Increases With Population Size for All Visual Areas</h3>
 As you might have noticed from the above figures, the performance of the classifier depends on the size of the population of neurons in a given area. This is illustrated more clearly in the figure below.
 
 [**Figure 2a**]: /assets/blog/natural_image_identity/accuracy_per_population_size.png "Performance per Population Size"
@@ -48,9 +49,9 @@ Another way to evaluate and compare each classifier's performance is to assess t
 
 From the normalized confusion matrix, you will notice that there is a close agreement between each area classifier's predicted class label (i.e. image identity) and the true label. The image labels (1-118) is the same for each matrix. Next time around, I would like to make an interactive plot that let's you visualize which images an area classifier predicts well.
 
-![**Figure 2b - confusion matrix and mutual information per population size**]: /assets/blog/natural_image_identity/mutual_info.png "Confusion Matrix and Mutual information "
+[**Figure 2b - confusion matrix and mutual information per population size**]: /assets/blog/natural_image_identity/mutual_info.png "Confusion Matrix and Mutual information "
 
-###Natural Image Identity Performance Accuracy Across Time
+<h3>Natural Image Identity Performance Accuracy Across Time </h3>
 The next question I asked was whether different visual areas might achieve higher accuracy at different times from the stimulus onset. I found three ways to approach this question.
 
 The first approach To evaluate the performance of the classifier across time, I trained The decoder using the mean response from 200-300ms post-stimulus and tested the classification accuracy using the activity at each time point (or frame).
@@ -66,12 +67,13 @@ Given that the single frame approach was informative enough for classifier, I tr
 [**Figure 3c.**]: /assets/blog/natural_image_identity/accuracy_across_time_independent_frames.png "Performance across time, independently trained at each time point"
 
 
-### Natural Image Categorization
+<h3>Natural Image Categorization</h3>
 Given that neural responses in these areas can be used to perform natural image identity task. What if I, instead, now asked the visual areas to categorize the natural images into two groups? My prediction was that putative higher visual areas, such as PM or AL, would perform much better than V1. I devised two simple categories, animals vs. non-animals. Although the visual areas all performed above chance (50%), they each performed similarly, including V1.
 
 [**Figure 4**]: /assets/blog/natural_image_identity/binary_categorization_accuracy.png "Animal vs Non-animal Categorization Performance"
 
-#Discussion
+<h1>Discussion</h1>
+
 I was surprised to find that V1 outperformed all other visual areas on the natural image identity task, considering V1 is lower in the putative mouse visual hierarchy. The observation that V1 could linearly classify natural images is consistent with a previous study from [Kampa and colleagues (2011)](http://journal.frontiersin.org/article/10.3389/fncir.2011.00018/full). In the present work, I find that V1 is not only great at natural image identity task but it does a much better job that other visual areas. This suggests that V1 neurons might be encoding features that linearly discriminate individual natural images.
 
 There are several possible explanations for the V1 advantage. V1 is a low-level feature detector i.e. neurons in V1 respond well to low level features such as contrast, edges, luminance, and orientation. Although the experimenters accounted for low-level features such as contrast and luminance during stimulus presentation, V1 could still be sensitive to other low-level features such as edges or spatial frequency.
