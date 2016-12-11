@@ -57,7 +57,7 @@ The next question I asked was whether different visual areas might achieve highe
 
 The first approach To evaluate the performance of the classifier across time, I trained The decoder using the mean response from 200-300ms post-stimulus and tested the classification accuracy using the activity at each time point (or frame).
 
-<center><img src="assets/blog/natural_image_identity/accuracy_across_time_mean_frames.png" height="400" title="Performance across time, trained with mean frames from 200-300ms post-stimulus onset"></center>
+<center><img src="/assets/blog/natural_image_identity/accuracy_across_time_mean_frames.png" height="400" title="Performance across time, trained with mean frames from 200-300ms post-stimulus onset"></center>
 
 The second approach was to take a single frame, approximately 200ms post-stimulus, to train a classifier and compute the cross-validated test accuracy for each frame. This worked surprisingly well that the neural activity within a single frame (approximately 30ms) achieved high prediction accuracy, comparable to using the average activity between a larger time window of 100ms.
 
