@@ -89,8 +89,8 @@ Regarding the categorization task (Figure 4), performance could be improved by c
 In these experiments, I assessed the passive decoding of natural image identity i.e.  animals were not actively engaged in a behavioral task. My prediction is that the V1 advantage would disappear under actively-engaged task conditions.
 [Spencer Smith's lab](http://www.slslab.org/) recently showed that [mice can, behaviorally, discriminate natural images](http://www.slslab.org/nid/2016/08/11/introduction-to-this-project/). It would be interesting to compare how well each area performs on natural image identity and categorization when the animal is engaged in a behavioral task.   
 
-#Resources
+<h2>Resources</h2>
 * Myers & Kreiman - [Tutorial on Pattern Classification](http://klab.tch.harvard.edu/publications/PDFs/8404_019.pdf) - Chapter 19 of Visual Population Codes. This was a helpful tutorial on performing classifier analyses on neural data.
 
-##Acknowledgements
-I would like to thank Sashank Pisupati, Arka Banerjee, Matt Kaufman, and Anne Churchland for helpful discussions and suggestions. And also thanks to the [Allen Institute](alleninstitute.org) for acquiring and curating this awesome dataset.
+<h2>Thanks to:</h2>
+Sashank Pisupati, Arka Banerjee, Matt Kaufman, and Anne Churchland for helpful discussions and suggestions. And also to the [Allen Institute](alleninstitute.org) for acquiring and curating this awesome dataset.
