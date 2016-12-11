@@ -50,28 +50,27 @@ Another way to evaluate and compare each classifier's performance is to assess t
 
 From the normalized confusion matrix, you will notice that there is a close agreement between each area classifier's predicted class label (i.e. image identity) and the true label. The image labels (1-118) is the same for each matrix. Next time around, I would like to make an interactive plot that let's you visualize which images an area classifier predicts well.
 
-[**Figure 2b - confusion matrix and mutual information per population size**]: /assets/blog/natural_image_identity/mutual_info.png "Confusion Matrix and Mutual information "
+<center><img src="/assets/blog/natural_image_identity/mutual_info.png" height="400" title="Confusion Matrix and Mutual information"></center>
 
 <h2>Natural Image Identity Performance Accuracy Across Time </h2>
 The next question I asked was whether different visual areas might achieve higher accuracy at different times from the stimulus onset. I found three ways to approach this question.
 
 The first approach To evaluate the performance of the classifier across time, I trained The decoder using the mean response from 200-300ms post-stimulus and tested the classification accuracy using the activity at each time point (or frame).
 
-[**Figure 3a.**]: /assets/blog/natural_image_identity/accuracy_across_time_mean_frames.png "Performance across time, trained with mean frames from 200-300ms post-stimulus onset"
+<center><img src="assets/blog/natural_image_identity/accuracy_across_time_mean_frames.png" height="400" title="Performance across time, trained with mean frames from 200-300ms post-stimulus onset"></center>
 
 The second approach was to take a single frame, approximately 200ms post-stimulus, to train a classifier and compute the cross-validated test accuracy for each frame. This worked surprisingly well that the neural activity within a single frame (approximately 30ms) achieved high prediction accuracy, comparable to using the average activity between a larger time window of 100ms.
 
-[**Figure 3b.**]: /assets/blog/natural_image_identity/accuracy_across_time_single_frame.png "Performance across time, trained with single frame at 200ms post-stimulus onset"
+<center><img src="/assets/blog/natural_image_identity/accuracy_across_time_single_frame.png" height="400" title="Performance across time, trained with single frame at 200ms post-stimulus onset"></center>
 
 Given that the single frame approach was informative enough for classifier, I trained independent classifiers at each time point (frame), and compute the cross-validated accuracy for each frame. Again, very similar temporal profile.
 
-[**Figure 3c.**]: /assets/blog/natural_image_identity/accuracy_across_time_independent_frames.png "Performance across time, independently trained at each time point"
-
+<center><img src="/assets/blog/natural_image_identity/accuracy_across_time_independent_frames.png" height="400" title="Performance across time, independently trained at each time point"></center>
 
 <h2>Natural Image Categorization</h2>
 Given that neural responses in these areas can be used to perform natural image identity task. What if I, instead, now asked the visual areas to categorize the natural images into two groups? My prediction was that putative higher visual areas, such as PM or AL, would perform much better than V1. I devised two simple categories, animals vs. non-animals. Although the visual areas all performed above chance (50%), they each performed similarly, including V1.
 
-[**Figure 4**]: /assets/blog/natural_image_identity/binary_categorization_accuracy.png "Animal vs Non-animal Categorization Performance"
+<center><img src="/assets/blog/natural_image_identity/binary_categorization_accuracy.png" height="400" title="Animal vs Non-animal Categorization Performance"></center>
 
 <h1>Discussion</h1>
 
