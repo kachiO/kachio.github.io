@@ -74,6 +74,7 @@ Other potential explanation for V1's high accuracy in image identification and a
 <li>Smaller receptive field size of neurons. V1 typically has smaller receptive fields than other higher visual areas. I could verify this with the dataset from the [Locally Sparse Noise stimulus](http://observatory.brain-map.org/visualcoding/stimulus/locally_sparse_noise). This could be fun. </li>
 
 <li>Incomplete visual information in secondary visual areas. This is an interesting idea that has to do with the possibility that individual mouse secondary visual areas might not have complete coverage of visual space ([Garrett et al 2014](https://www.ncbi.nlm.nih.gov/pmc/articles/pmid/25209296/)), and therefore only sample a portion of the visual scene. This would suggest that combining responses from multiple secondary visual areas could outperform V1. I have not yet tested this idea, but I could run the classifier analysis combining neurons from areas LM and PM or AL and comparing the performance to V1.</li>
+</ul>
 
 The one major caveat is that it has not yet been established that there exists a mouse visual hierarchy, analogous to the way vision scientist think about the primate visual hierarchy. However several parallels do exist between the mouse and primate visual system (for review, see [Glickfeld et al 2014](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4398969/)).
 
