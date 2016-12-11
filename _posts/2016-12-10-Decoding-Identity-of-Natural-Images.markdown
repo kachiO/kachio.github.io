@@ -29,7 +29,7 @@ The code is available on Juptyer Notebook on the Github Repo.
 
 <h1>Results</h1>
 
-<h3>Primary Visual Cortex (V1) Achieved Highest Performance on Natural Image Identity Task</h3>
+<h2>Primary Visual Cortex (V1) Achieved Highest Performance on Natural Image Identity Task</h2>
 Although all the visual areas performed well above chance (0.85%), V1 exhibited the highest performance (>75%) in linearly classifying the natural images, followed by area LM (>50%). Areas PM and LM performed similarly (> 30%) to each other.
 
 [**Figure 1a.**]: /assets/blog/natural_image_identity/Decoder_accuracy_all_neurons.png "Natural Image Identity Performance for Each Area, all neurons included"
@@ -40,7 +40,7 @@ You might have noticed from Table 1 that each area has a different number of neu
 [**Figure 1b.**]: /assets/blog/natural_image_identity/Decoder_accuracy_2100_neurons.png "Natural Image Identity Performance for Each Area, 2100 neurons included"
 
 
-<h3>Natural Image Identity Performance Increases With Population Size for All Visual Areas</h3>
+<h2>Natural Image Identity Performance Increases With Population Size for All Visual Areas</h2>
 As you might have noticed from the above figures, the performance of the classifier depends on the size of the population of neurons in a given area. This is illustrated more clearly in the figure below.
 
 [**Figure 2a**]: /assets/blog/natural_image_identity/accuracy_per_population_size.png "Performance per Population Size"
@@ -51,7 +51,7 @@ From the normalized confusion matrix, you will notice that there is a close agre
 
 [**Figure 2b - confusion matrix and mutual information per population size**]: /assets/blog/natural_image_identity/mutual_info.png "Confusion Matrix and Mutual information "
 
-<h3>Natural Image Identity Performance Accuracy Across Time </h3>
+<h2>Natural Image Identity Performance Accuracy Across Time </h2>
 The next question I asked was whether different visual areas might achieve higher accuracy at different times from the stimulus onset. I found three ways to approach this question.
 
 The first approach To evaluate the performance of the classifier across time, I trained The decoder using the mean response from 200-300ms post-stimulus and tested the classification accuracy using the activity at each time point (or frame).
