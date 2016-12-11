@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Decoding Identity of Natural Images From Mouse Visual Cortex"
+title: "Decoding Natural Image Identity From Mouse Visual Cortex"
 date: 2016-12-10
 ---
 
@@ -89,7 +89,8 @@ I was surprised to find that V1 outperformed all other visual areas on the natur
 There are several possible explanations for the V1 advantage. V1 is a low-level feature detector i.e. neurons in V1 respond well to low level features such as contrast, edges, luminance, and orientation. Although the experimenters accounted for low-level features such as contrast and luminance during stimulus presentation, V1 could still be sensitive to other low-level features such as edges or spatial frequency.
 Other potential explanation for V1's high accuracy in image identification and avenues for future work include:
 <ul type="circle">
-<li>More high firing rate neurons in V1, i.e. higher signal to noise. One way to address this is to infer spike events using available [deconvolution methods](https://scholar.google.com/scholar?hl=en&q=deconvolution+calcium+imaging+&btnG=&as_sdt=1%2C5&as_sdtp=) to estimate the overall spike event rates per area. One could then randomly remove spikes and evaluate performance on the natural image identity task.</li>
+<li>More high firing rate neurons in V1, i.e. higher signal to noise. One way to address this is to infer spike events using available
+<a href="https://scholar.google.com/scholar?hl=en&q=deconvolution+calcium+imaging+&btnG=&as_sdt=1%2C5&as_sdtp=">deconvolution methods</a> to estimate the overall spike event rates per area. One could then randomly remove spikes and evaluate performance on the natural image identity task.</li>
 
 <li>Smaller receptive field size of neurons. V1 typically has smaller receptive fields than other higher visual areas. I could verify this with the dataset from the [Locally Sparse Noise stimulus](http://observatory.brain-map.org/visualcoding/stimulus/locally_sparse_noise). This could be fun. </li>
 
