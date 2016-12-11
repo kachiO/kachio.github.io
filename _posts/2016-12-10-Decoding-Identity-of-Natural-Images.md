@@ -4,7 +4,7 @@ title: "Decoding Identity of Natural Images From Mouse Visual Cortex"
 date: 2016-12-10
 ---
 
-#Introduction
+<h1>Introduction</h1>
 
 The [Allen Institute for Brain Science](https://www.alleninstitute.org/) recently released a [rich dataset](http://observatory.brain-map.org/visualcoding) containing neural responses from many visual brain areas and cortical layers. Here is a nice [video](https://www.youtube.com/watch?v=fSaOCDmRs1Q) introducing the [Brain Observatory project](http://observatory.brain-map.org/visualcoding).This unprecedented dataset is an important resource and testbed for generating hypotheses about visual cortical function.
 
