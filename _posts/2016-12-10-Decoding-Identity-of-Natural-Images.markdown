@@ -12,7 +12,7 @@ Mice are relatively [new players to the visual neuroscience game](http://www.nat
 
 I set out on a data mission to investigate whether neurons in mouse visual cortex could linearly readout (i.e. discriminate) the identity of natural images.
 
-<h1>The Data & Methods</h1>
+<h1>Methods & Data</h1>
 
 Mice were presented with a total of 118 natural scenes. Each scene was presented for 250mss and randomly repeated 50 times, one immediately after the other with no blank screen in between. (I thought this was a bit unusual that they would present the scenes one right after the other without a blank screen in between. Maybe they were worried about stimulus onset transients?) A blank screen, however, was presented after ever 100 scenes. More details about the experimental procedures are discussed in the [technical whitepaper](http://help.brain-map.org/display/observatory/Documentation).
 
