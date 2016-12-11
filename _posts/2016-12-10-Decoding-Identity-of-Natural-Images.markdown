@@ -32,7 +32,7 @@ The code is available on Juptyer Notebook on the Github Repo.
 <h2>Primary Visual Cortex (V1) Achieved Highest Performance on Natural Image Identity Task</h2>
 Although all the visual areas performed well above chance (0.85%), V1 exhibited the highest performance (>75%) in linearly classifying the natural images, followed by area LM (>50%). Areas PM and LM performed similarly (> 30%) to each other.
 
-<center><img src="/assets/blog/natural_image_identity/Decoder_accuracy_all_neurons.png" height="280" title="Figure 1a. Natural Image Identity Performance for Each Area, all neurons included"></center>
+<center><img src="/assets/blog/natural_image_identity/Decoder_accuracy_all_neurons.png" height="400" title="Figure 1a. Natural Image Identity Performance for Each Area, all neurons included"></center>
 
 
 You might have noticed from Table 1 that each area has a different number of neurons (features), and that the best performing area V1 has the most number of neurons. In other words V1 might have outperformed other areas because it had more neurons. However, when I repeat the classifier using 2100 neurons (features) per area, V1 still outperformed all the other areas.
