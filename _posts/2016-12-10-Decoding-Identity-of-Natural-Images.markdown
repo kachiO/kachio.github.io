@@ -32,7 +32,7 @@ The code is available on Juptyer Notebook on the Github Repo.
 <h2>Primary Visual Cortex (V1) Achieved Highest Performance on Natural Image Identity Task</h2>
 Although all the visual areas performed well above chance (0.85%), V1 exhibited the highest performance (>75%) in linearly classifying the natural images, followed by area LM (>50%). Areas PM and LM performed similarly (> 30%) to each other.
 
-[**Figure 1a.**]: /assets/blog/natural_image_identity/Decoder_accuracy_all_neurons.png "Natural Image Identity Performance for Each Area, all neurons included"
+<center><img src="/assets/blog/natural_image_identity/Decoder_accuracy_all_neurons.png" height="280" title="Figure 1a. Natural Image Identity Performance for Each Area, all neurons included"></center>
 
 
 You might have noticed from Table 1 that each area has a different number of neurons (features), and that the best performing area V1 has the most number of neurons. In other words V1 might have outperformed other areas because it had more neurons. However, when I repeat the classifier using 2100 neurons (features) per area, V1 still outperformed all the other areas.
@@ -67,7 +67,7 @@ Given that the single frame approach was informative enough for classifier, I tr
 [**Figure 3c.**]: /assets/blog/natural_image_identity/accuracy_across_time_independent_frames.png "Performance across time, independently trained at each time point"
 
 
-<h3>Natural Image Categorization</h3>
+<h2>Natural Image Categorization</h2>
 Given that neural responses in these areas can be used to perform natural image identity task. What if I, instead, now asked the visual areas to categorize the natural images into two groups? My prediction was that putative higher visual areas, such as PM or AL, would perform much better than V1. I devised two simple categories, animals vs. non-animals. Although the visual areas all performed above chance (50%), they each performed similarly, including V1.
 
 [**Figure 4**]: /assets/blog/natural_image_identity/binary_categorization_accuracy.png "Animal vs Non-animal Categorization Performance"
