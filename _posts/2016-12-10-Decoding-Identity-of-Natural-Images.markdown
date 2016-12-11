@@ -99,7 +99,4 @@ Myers & Kreiman - [Tutorial on Pattern Classification](http://klab.tch.harvard.e
 <h2>Thanks to:</h2>
 Sashank Pisupati, Arka Banerjee, Matt Kaufman, and Anne Churchland for helpful discussions and suggestions. And also to the [Allen Institute](alleninstitute.org) for acquiring and curating this awesome dataset.
 
-
-   <li style="font-size:30px">Example Category</li>
-
   
