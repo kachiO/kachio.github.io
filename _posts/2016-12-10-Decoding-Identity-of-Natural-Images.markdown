@@ -39,6 +39,8 @@ You might have noticed from Table 1 that each area has a different number of neu
 
 [**Figure 1b.**]: /assets/blog/natural_image_identity/Decoder_accuracy_2100_neurons.png "Natural Image Identity Performance for Each Area, 2100 neurons included"
 
+<center><img src="/assets/blog/natural_image_identity/Decoder_accuracy_2100_neurons.png" height="400" alt= "Figure 1b." title="Natural Image Identity Performance for Each Area, 2100 neurons included"></center>
+
 
 <h2>Natural Image Identity Performance Increases With Population Size for All Visual Areas</h2>
 As you might have noticed from the above figures, the performance of the classifier depends on the size of the population of neurons in a given area. This is illustrated more clearly in the figure below.
