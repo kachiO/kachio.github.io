@@ -18,11 +18,7 @@ Mice were presented with a total of 118 natural scenes. Each scene was presented
 
 I had to do a bit of data wrangling to extract and save the responses from different brain areas, cell types, and scenes. I created a matrix, _XT_, of size _n_ x _c_ x _t_  where n = number of trials, c = number of cells in a visual area (or cell type), and t = time (or frames).This matrix was created for each visual area. The number of cells per area were ranged between 2157 (PM) to 4189 (V1) (see table below). There were 5900 trials total (118 images, 50 repeats each). Blank stimulus trials were excluded. The total number of frames included per cell was 21, which included 7 frames pre-stimulus, 7 frames during stimulus, and 7 frames post-stimulus. Approximately 7 imaging frames were acquired per 250ms. The analyses in this project were done using the relative changes in fluorescence (${\Delta} F/F$) as the neuronal response instead of spikes.
 
-**Table 1. Number of Cells Per Area:**
-| PM   | AL   | LM   | V1   |
-|------|------|------|------|
-| 2157 | 2323 | 2606 | 4189 |
-<table>
+<center><table>
     <tr>
         <th>PM</th>
         <th>AL</th>
@@ -35,7 +31,7 @@ I had to do a bit of data wrangling to extract and save the responses from diffe
         <td>2606</td>
         <td>4189</td>
     </tr>
-</table>
+</table></center>
 
 To measure performance on identifying a natural image, I trained a linear support vector classifier ([one-vs-rest classifier scheme](https://en.wikipedia.org/wiki/Multiclass_classification#One-vs.-rest)) on the average response during 200-300ms post stimulus, and computed cross-validated test accuracy for the trained classifier for each area. The classifier was trained on 70% of the trials in an area, and tested on the remaining 30%. In most cases I repeated this procedure 10 times to obtain an average and computed the standard error of the mean (SEM).
 
