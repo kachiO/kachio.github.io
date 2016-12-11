@@ -64,7 +64,7 @@ As you might have noticed from the above figures, the performance of the classif
 
 <center><img src="/assets/blog/natural_image_identity/accuracy_per_population_size.png" height="400" title="Performance per Population Size"></center>
 
-Another way to evaluate and compare each classifier's performance is to assess the [mutual information](https://en.wikipedia.org/wiki/Mutual_information) between the classifier's predicted class label and the true class label. To calculate mutual information I computed a confusion matrix, which reflects the proportion of times the classifier guessed the true class label i.e. the conditional probability ($P(predicted|true)$) of the classifier predicted label given the true label.
+Another way to evaluate and compare each classifier's performance is to assess the [mutual information](https://en.wikipedia.org/wiki/Mutual_information) between the classifier's predicted class label and the true class label. To calculate mutual information I computed a confusion matrix, which reflects the proportion of times the classifier guessed the true class label i.e. the conditional probability (<em>P(predicted|true)</em>) of the classifier predicted label given the true label.
 
 From the normalized confusion matrix, you will notice that there is a close agreement between each area classifier's predicted class label (i.e. image identity) and the true label. The image labels (1-118) is the same for each matrix. Next time around, I would like to make an interactive plot that let's you visualize which images an area classifier predicts well.
 
