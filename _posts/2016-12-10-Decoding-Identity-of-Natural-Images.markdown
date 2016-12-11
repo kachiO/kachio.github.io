@@ -37,8 +37,6 @@ Although all the visual areas performed well above chance (0.85%), V1 exhibited 
 
 You might have noticed from Table 1 that each area has a different number of neurons (features), and that the best performing area V1 has the most number of neurons. In other words V1 might have outperformed other areas because it had more neurons. However, when I repeat the classifier using 2100 neurons (features) per area, V1 still outperformed all the other areas.
 
-[**Figure 1b.**]: /assets/blog/natural_image_identity/Decoder_accuracy_2100_neurons.png "Natural Image Identity Performance for Each Area, 2100 neurons included"
-
 <center><img src="/assets/blog/natural_image_identity/Decoder_accuracy_2100_neurons.png" height="400" title="Natural Image Identity Performance for Each Area, 2100 neurons included"></center>
 
 <h2>Natural Image Identity Performance Increases With Population Size for All Visual Areas</h2>
@@ -57,7 +55,7 @@ The next question I asked was whether different visual areas might achieve highe
 
 The first approach (a) To evaluate the performance of the classifier across time, I trained The decoder using the mean response from 200-300ms post-stimulus and tested the classification accuracy using the activity at each time point (or frame). The second approach (b) was to take a single frame, approximately 200ms post-stimulus, to train a classifier and compute the cross-validated test accuracy for each frame. This worked surprisingly well that the neural activity within a single frame (approximately 30ms) achieved high prediction accuracy, comparable to using the average activity between a larger time window of 100ms. Given that the single frame approach was informative enough for classifier, I trained independent classifiers at each time point (frame), and compute the cross-validated accuracy for each frame. Again, very similar temporal profile.
 
-<center><img src="/assets/blog/natural_image_identity/accuracy_across_time_all" height="400" title="Performance across time"></center>
+<center><img src="/assets/blog/natural_image_identity/accuracy_across_time_all.png" height="400" title="Performance across time"></center>
 
 <h2>Natural Image Categorization</h2>
 Given that neural responses in these areas can be used to perform natural image identity task. What if I, instead, now asked the visual areas to categorize the natural images into two groups? My prediction was that putative higher visual areas, such as PM or AL, would perform much better than V1. I devised two simple categories, animals vs. non-animals. Although the visual areas all performed above chance (50%), they each performed similarly, including V1.
