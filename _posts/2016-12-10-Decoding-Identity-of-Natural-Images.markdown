@@ -46,8 +46,6 @@ I had to do a bit of data wrangling to extract and save the responses from diffe
 
 To measure performance on identifying a natural image, I trained a linear support vector classifier ([one-vs-rest classifier scheme](https://en.wikipedia.org/wiki/Multiclass_classification#One-vs.-rest)) on the average response during 200-300ms post stimulus, and computed cross-validated test accuracy for the trained classifier for each area. The classifier was trained on 70% of the trials in an area, and tested on the remaining 30%. In most cases I repeated this procedure 10 times to obtain an average and computed the standard error of the mean (SEM).
 
-The code is available on Juptyer Notebook on the Github Repo.
-
 <h1>Results</h1>
 
 <h2>Primary Visual Cortex (V1) Achieved Highest Performance on Natural Image Identity Task</h2>
