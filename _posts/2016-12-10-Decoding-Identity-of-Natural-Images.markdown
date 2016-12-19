@@ -3,7 +3,7 @@ layout: post
 title: "Decoding Natural Image Identity From Mouse Visual Cortex"
 comments: true
 date: 2016-12-10
-excerpt: "First data project on Allen Institute Brain Observatory."
+excerpt: "Data project using Allen Institute Brain Observatory. The goal was to find out whether neurons in mouse visual cortical areas could linearly readout (i.e. discriminate) the identity of natural images."
 mathjax: true
 ---
 
