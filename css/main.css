@@ -25,16 +25,13 @@ a {
 a:hover {
     text-decoration: underline;
 }
-
-a:visited { color: #205caa; }
-
 h1 {
-    font-size: 2em;
+    font-size: 1.5em;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
 }
 p {
-    font-size: .75em;
-    line-height: 1.0em;
+    font-size: 1em;
+    line-height: 1.2em;
     color: #333;
 }
 footer {
@@ -43,8 +40,8 @@ footer {
 }
 
 ul.posts { 
-    margin: 20px auto 40px; 
-    font-size: 0.75em;
+    margin: 10px auto 40px; 
+    font-size: 1em;
 }
 
 ul.posts li {
