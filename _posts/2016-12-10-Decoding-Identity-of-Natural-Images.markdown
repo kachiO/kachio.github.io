@@ -1,7 +1,10 @@
 ---
 layout: post
 title: "Decoding Natural Image Identity From Mouse Visual Cortex"
+comments: true
 date: 2016-12-10
+excerpt: "First data project on Allen Institute Brain Observatory."
+mathjax: true
 ---
 
 <h1>Intro</h1>
