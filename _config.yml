@@ -6,6 +6,7 @@ description: "Personal website"
 baseurl: ""
 url: "http://kachio.github.io"
 github_username:  kachio
+twitter_username: kachiodemz
 
 # Build settings
 markdown: kramdown
