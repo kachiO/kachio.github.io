@@ -7,14 +7,6 @@ excerpt: "Data project using Allen Institute Brain Observatory. The goal was to 
 mathjax: true
 ---
 
-<h2>IPython Notebooks</h2>(https://github.com/srcole/qwm/blob/master/sfn/Poster%20viewer%20distribution%20by%20SfN%20theme.ipynb)
-<ul>
-<li>[Confusion Matrix and Mutual Information](https://github.com/kachiO/ipython-notebooks/blob/master/mouse%20natural%20images%20identity/confusion%20matrix%20and%20mutual%20information.ipynb)</li>
-<li>[Natural Image Discrimination](https://github.com/kachiO/ipython-notebooks/blob/master/mouse%20natural%20images%20identity/Natural%20Image%20Identity%20Discrimination.ipynb) </li>
-<li>[Natural Image Categorization](https://github.com/kachiO/ipython-notebooks/blob/master/mouse%20natural%20images%20identity/Natural%20Scene%20Categorization.ipynb) </li>
-</ul>
-
-
 <h1>Intro</h1>
 
 The [Allen Institute for Brain Science](https://www.alleninstitute.org/) recently released a [rich dataset](http://observatory.brain-map.org/visualcoding) containing neural responses from many visual brain areas and cortical layers. Here is a nice [video](https://www.youtube.com/watch?v=fSaOCDmRs1Q) introducing the [Brain Observatory project](http://observatory.brain-map.org/visualcoding).This unprecedented dataset is an important resource and testbed for generating hypotheses about visual cortical function.
@@ -27,7 +19,7 @@ I set out on a data mission to investigate whether neurons in mouse visual corte
 
 Mice were presented with a total of 118 natural scenes. Each scene was presented for 250mss and randomly repeated 50 times, one immediately after the other with no blank screen in between. (I thought this was a bit unusual that they would present the scenes one right after the other without a blank screen in between. Maybe they were worried about stimulus onset transients?) A blank screen, however, was presented after ever 100 scenes. More details about the experimental procedures are discussed in the [technical whitepaper](http://help.brain-map.org/display/observatory/Documentation).
 
-I had to do a bit of data wrangling to extract and save the responses from different brain areas, cell types, and scenes. I created a matrix, _XT_, of size _n_ x _c_ x _t_  where n = number of trials, c = number of cells in a visual area (or cell type), and t = time (or frames).This matrix was created for each visual area. The number of cells per area were ranged between 2157 (PM) to 4189 (V1) (see table below). There were 5900 trials total (118 images, 50 repeats each). Blank stimulus trials were excluded. The total number of frames included per cell was 21, which included 7 frames pre-stimulus, 7 frames during stimulus, and 7 frames post-stimulus. Approximately 7 imaging frames were acquired per 250ms. The analyses in this project were done using the relative changes in fluorescence (delta F/F) as the neuronal response instead of spikes.
+I had to do a bit of data wrangling to extract and save the responses from different brain areas, cell types, and scenes ([see Download Dataset IPython Notebook](https://github.com/kachiO/ipython-notebooks/blob/master/mouse%20natural%20images%20identity/download%20multiple%20datasets.ipynb)). I created a matrix, _XT_, of size _n_ x _c_ x _t_  where n = number of trials, c = number of cells in a visual area (or cell type), and t = time (or frames).This matrix was created for each visual area. The number of cells per area were ranged between 2157 (PM) to 4189 (V1) (see table below). There were 5900 trials total (118 images, 50 repeats each). Blank stimulus trials were excluded. The total number of frames included per cell was 21, which included 7 frames pre-stimulus, 7 frames during stimulus, and 7 frames post-stimulus. Approximately 7 imaging frames were acquired per 250ms. The analyses in this project were done using the relative changes in fluorescence (delta F/F) as the neuronal response instead of spikes.
 
 <style>
     table {
@@ -55,7 +47,9 @@ I had to do a bit of data wrangling to extract and save the responses from diffe
     </tr>
 </table></center>
 
-To measure performance on identifying a natural image, I trained a linear support vector classifier ([one-vs-rest classifier scheme](https://en.wikipedia.org/wiki/Multiclass_classification#One-vs.-rest)) on the average response during 200-300ms post stimulus, and computed cross-validated test accuracy for the trained classifier for each area. The classifier was trained on 70% of the trials in an area, and tested on the remaining 30%. In most cases I repeated this procedure 10 times to obtain an average and computed the standard error of the mean (SEM).
+To measure performance on identifying a natural image, I trained a linear support vector classifier ([one-vs-rest classifier scheme](https://en.wikipedia.org/wiki/Multiclass_classification#One-vs.-rest)) on the average response during 200-300ms post stimulus, and computed cross-validated test accuracy for the trained classifier for each area. The classifier was trained on 70% of the trials in an area, and tested on the remaining 30%. In most cases I repeated this procedure 10 times to obtain an average and computed the standard error of the mean (SEM). [see Natural Image Identity Classification IPython Notebook](https://github.com/kachiO/ipython-notebooks/blob/master/mouse%20natural%20images%20identity/Natural%20Image%20Identity%20Discrimination.ipynb)
+
+
 
 <h1>Results</h1>
 
@@ -73,7 +67,7 @@ As you might have noticed from the above figures, the performance of the classif
 
 <center><img src="/assets/blog/natural_image_identity/accuracy_per_population_size.png" height="400" title="Performance per Population Size"></center>
 
-Another way to evaluate and compare each classifier's performance is to assess the [mutual information](https://en.wikipedia.org/wiki/Mutual_information) between the classifier's predicted class label and the true class label. To calculate mutual information I computed a confusion matrix, which reflects the proportion of times the classifier guessed the true class label i.e. the conditional probability (<em>P(predicted|true)</em>) of the classifier predicted label given the true label.
+Another way to evaluate and compare each classifier's performance is to assess the [mutual information](https://en.wikipedia.org/wiki/Mutual_information) between the classifier's predicted class label and the true class label. To calculate mutual information I computed a confusion matrix, which reflects the proportion of times the classifier guessed the true class label i.e. the conditional probability (<em>P(predicted|true)</em>) of the classifier predicted label given the true label. [see Confusion Matrix and Mutual Information IPython Notebook](https://github.com/kachiO/ipython-notebooks/blob/master/mouse%20natural%20images%20identity/confusion%20matrix%20and%20mutual%20information.ipynb)
 
 From the normalized confusion matrix, you will notice that there is a close agreement between each area classifier's predicted class label (i.e. image identity) and the true label. The image labels (1-118) is the same for each matrix. Next time around, I would like to make an interactive plot that let's you visualize which images an area classifier predicts well.
 
@@ -87,7 +81,9 @@ The first approach (a) To evaluate the performance of the classifier across time
 <center><img src="/assets/blog/natural_image_identity/accuracy_across_time_all2.png" height="380" title="Performance across time"></center>
 
 <h2>Natural Image Categorization</h2>
-Given that neural responses in these areas can be used to perform natural image identity task. What if I, instead, now asked the visual areas to categorize the natural images into two groups. My prediction was that putative higher visual areas, such as PM or AL, would perform much better than V1. I devised two simple categories, animals vs. non-animals ([raw data](https://github.com/kachiO/ipython-notebooks/blob/master/mouse%20natural%20images%20identity/naturalscene%20content.xlsx)). All the areas performed above chance (50%) and the categorization performance was similar for all areas including V1. In a future extension of the project, I could assign image categories using more sophisticated approaches such as structured similarity index ([SSIM](https://en.wikipedia.org/wiki/Structural_similarity)), [perceptual distance metric](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3586997/), or neural responses correlation similarity (e.g. [representational dissimilarity metric](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2605405/)).
+Given that neural responses in these areas can be used to perform natural image identity task. What if I, instead, now asked the visual areas to categorize the natural images into two groups. My prediction was that putative higher visual areas, such as PM or AL, would perform much better than V1. I devised two simple categories, animals vs. non-animals ([raw data](https://github.com/kachiO/ipython-notebooks/blob/master/mouse%20natural%20images%20identity/naturalscene%20content.xlsx)). All the areas performed above chance (50%) and the categorization performance was similar for all areas including V1.[see Natural Image Categorization IPython Notebook](https://github.com/kachiO/ipython-notebooks/blob/master/mouse%20natural%20images%20identity/Natural%20Scene%20Categorization.ipynb)
+
+In a future extension of the project, I could assign image categories using more sophisticated approaches such as structured similarity index ([SSIM](https://en.wikipedia.org/wiki/Structural_similarity)), [perceptual distance metric](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3586997/), or neural responses correlation similarity (e.g. [representational dissimilarity metric](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2605405/)).
 
 <center>
 <figure>
