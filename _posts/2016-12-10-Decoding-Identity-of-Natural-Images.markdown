@@ -7,6 +7,14 @@ excerpt: "Data project using Allen Institute Brain Observatory. The goal was to 
 mathjax: true
 ---
 
+<h2>IPython Notebooks</h2>(https://github.com/srcole/qwm/blob/master/sfn/Poster%20viewer%20distribution%20by%20SfN%20theme.ipynb)
+<ul>
+<li>[Confusion Matrix and Mutual Information](https://github.com/kachiO/ipython-notebooks/blob/master/mouse%20natural%20images%20identity/confusion%20matrix%20and%20mutual%20information.ipynb)</li>
+<li>[Natural Image Discrimination](https://github.com/kachiO/ipython-notebooks/blob/master/mouse%20natural%20images%20identity/Natural%20Image%20Identity%20Discrimination.ipynb) </li>
+<li>[Natural Image Categorization](https://github.com/kachiO/ipython-notebooks/blob/master/mouse%20natural%20images%20identity/Natural%20Scene%20Categorization.ipynb) </li>
+</ul>
+
+
 <h1>Intro</h1>
 
 The [Allen Institute for Brain Science](https://www.alleninstitute.org/) recently released a [rich dataset](http://observatory.brain-map.org/visualcoding) containing neural responses from many visual brain areas and cortical layers. Here is a nice [video](https://www.youtube.com/watch?v=fSaOCDmRs1Q) introducing the [Brain Observatory project](http://observatory.brain-map.org/visualcoding).This unprecedented dataset is an important resource and testbed for generating hypotheses about visual cortical function.
@@ -79,9 +87,14 @@ The first approach (a) To evaluate the performance of the classifier across time
 <center><img src="/assets/blog/natural_image_identity/accuracy_across_time_all2.png" height="380" title="Performance across time"></center>
 
 <h2>Natural Image Categorization</h2>
-Given that neural responses in these areas can be used to perform natural image identity task. What if I, instead, now asked the visual areas to categorize the natural images into two groups. My prediction was that putative higher visual areas, such as PM or AL, would perform much better than V1. I devised two simple categories, animals vs. non-animals. All the areas performed above chance (50%) and the categorization performance was similar for all areas including V1. In a future extension of the project, I could assign image categories using more sophisticated approaches such as structured similarity index ([SSIM](https://en.wikipedia.org/wiki/Structural_similarity)), [perceptual distance metric](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3586997/), or neural responses correlation similarity (e.g. [representational dissimilarity metric](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2605405/)).
+Given that neural responses in these areas can be used to perform natural image identity task. What if I, instead, now asked the visual areas to categorize the natural images into two groups. My prediction was that putative higher visual areas, such as PM or AL, would perform much better than V1. I devised two simple categories, animals vs. non-animals ([raw data](https://github.com/kachiO/ipython-notebooks/blob/master/mouse%20natural%20images%20identity/naturalscene%20content.xlsx)). All the areas performed above chance (50%) and the categorization performance was similar for all areas including V1. In a future extension of the project, I could assign image categories using more sophisticated approaches such as structured similarity index ([SSIM](https://en.wikipedia.org/wiki/Structural_similarity)), [perceptual distance metric](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3586997/), or neural responses correlation similarity (e.g. [representational dissimilarity metric](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2605405/)).
 
-<center><img src="/assets/blog/natural_image_identity/binary_categorization_accuracy.png" height="400" title="Animal vs Non-animal Categorization Performance"></center>
+<center>
+<figure>
+    <img src="/assets/blog/natural_image_identity/binary_categorization_accuracy.png" height="400" title="Animal vs Non-animal  Categorization Performance"> <figcaption>Fig.5 Animal vs. Non Animal Categorization Performance</figcaption>
+   
+</figure>
+ </center>
 
 <h1>Discussion</h1>
 
