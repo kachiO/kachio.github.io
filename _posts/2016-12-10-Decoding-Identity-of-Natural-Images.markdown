@@ -49,36 +49,54 @@ I had to do a bit of data wrangling to extract and save the responses from diffe
 
 To measure performance on identifying a natural image, I trained a linear support vector classifier ([one-vs-rest classifier scheme](https://en.wikipedia.org/wiki/Multiclass_classification#One-vs.-rest)) on the average response during 200-300ms post stimulus, and computed cross-validated test accuracy for the trained classifier for each area. The classifier was trained on 70% of the trials in an area, and tested on the remaining 30%. In most cases I repeated this procedure 10 times to obtain an average and computed the standard error of the mean (SEM). [see Natural Image Identity Classification IPython Notebook](https://github.com/kachiO/ipython-notebooks/blob/master/mouse%20natural%20images%20identity/Natural%20Image%20Identity%20Discrimination.ipynb)
 
-
-
 <h1>Results</h1>
 
 <h2>Primary Visual Cortex (V1) Achieved Highest Performance on Natural Image Identity Task</h2>
 Although all the visual areas performed well above chance (0.85%), V1 exhibited the highest performance (>75%) in linearly classifying the natural images, followed by area LM (>50%). Areas PM and LM performed similarly (> 30%) to each other.
 
-<center><img src="/assets/blog/natural_image_identity/Decoder_accuracy_all_neurons.png" height="400" title="Figure 1a. Natural Image Identity Performance for Each Area, all neurons included"></center>
+<center>
+<figure>
+    <img src="/assets/blog/natural_image_identity/Decoder_accuracy_all_neurons.png" height="400" title="Natural Image Identity Performance for Each Area, all neurons included"><figcaption>Figure 1a. Natural Image Identity Performance for Each Area, all neurons neurons</figcaption>
+</figure>
+</center>
 
 You might have noticed from Table 1 that each area has a different number of neurons (features), and that the best performing area V1 has the most number of neurons. In other words V1 might have outperformed other areas because it had more neurons. However, when I repeat the classifier using 2100 neurons (features) per area, V1 still outperformed all the other areas.
 
-<center><img src="/assets/blog/natural_image_identity/Decoder_accuracy_2100_neurons.png" height="400" title="Natural Image Identity Performance for Each Area, 2100 neurons included"></center>
+<center>
+<figure>
+    <img src="/assets/blog/natural_image_identity/Decoder_accuracy_2100_neurons.png" height="400" title="Natural Image Identity Performance for Each Area, 2100 neurons included"><figcaption>Figure 1b. Natural Image Identity Performance for Each Area, 2100 neurons</figcaption>
+</figure>
+</center>
 
 <h2>Natural Image Identity Performance Increases With Population Size for All Visual Areas</h2>
 As you might have noticed from the above figures, the performance of the classifier depends on the size of the population of neurons in a given area. This is illustrated more clearly in the figure below.
 
-<center><img src="/assets/blog/natural_image_identity/accuracy_per_population_size.png" height="400" title="Performance per Population Size"></center>
+<center>
+<figure>
+    <img src="/assets/blog/natural_image_identity/accuracy_per_population_size.png" height="400" title="Performance per Population Size"><figcaption>Fig.2 Decoding Test Accuracy Increases with Population Size</figcaption>
+</figure>
+</center>
 
 Another way to evaluate and compare each classifier's performance is to assess the [mutual information](https://en.wikipedia.org/wiki/Mutual_information) between the classifier's predicted class label and the true class label. To calculate mutual information I computed a confusion matrix, which reflects the proportion of times the classifier guessed the true class label i.e. the conditional probability (<em>P(predicted|true)</em>) of the classifier predicted label given the true label. [see Confusion Matrix and Mutual Information IPython Notebook](https://github.com/kachiO/ipython-notebooks/blob/master/mouse%20natural%20images%20identity/confusion%20matrix%20and%20mutual%20information.ipynb)
 
 From the normalized confusion matrix, you will notice that there is a close agreement between each area classifier's predicted class label (i.e. image identity) and the true label. The image labels (1-118) is the same for each matrix. Next time around, I would like to make an interactive plot that let's you visualize which images an area classifier predicts well.
 
-<center><img src="/assets/blog/natural_image_identity/mutual_info.png" height="400" title="Confusion Matrix and Mutual information"></center>
+<center>
+<figure>
+    <img src="/assets/blog/natural_image_identity/mutual_info.png" height="400" title="Confusion Matrix and Mutual information"><figcaption>Fig.3 Confusion matrix and Mutual Information for Each Visual Area</figcaption>
+</figure>
+</center>
 
 <h2>Natural Image Identity Performance Accuracy Across Time </h2>
 The next question I asked was whether different visual areas might achieve higher accuracy at different times from the stimulus onset. I found three ways to approach this question.
 
 The first approach (a) To evaluate the performance of the classifier across time, I trained The decoder using the mean response from 200-300ms post-stimulus and tested the classification accuracy using the activity at each time point (or frame). The second approach (b) was to take a single frame, approximately 200ms post-stimulus, to train a classifier and compute the cross-validated test accuracy for each frame. This worked surprisingly well that the neural activity within a single frame (approximately 30ms) achieved high prediction accuracy, comparable to using the average activity between a larger time window of 100ms. 
 
-<center><img src="/assets/blog/natural_image_identity/accuracy_across_time_all2.png" height="380" title="Performance across time"></center>
+<center>
+<figure>
+    <img src="/assets/blog/natural_image_identity/accuracy_across_time_all2.png" height="380" title="Performance across time"><figcaption>Fig.4 Decoding Test Accuracy Across Time (a) trained with average response frames between 200-300ms (b) trained with single frame at approximately 200ms post stimulus onset</figcaption>
+</figure>
+</center>
 
 <h2>Natural Image Categorization</h2>
 Given that neural responses in these areas can be used to perform natural image identity task. What if I, instead, now asked the visual areas to categorize the natural images into two groups. My prediction was that putative higher visual areas, such as PM or AL, would perform much better than V1. I devised two simple categories, animals vs. non-animals ([raw data](https://github.com/kachiO/ipython-notebooks/blob/master/mouse%20natural%20images%20identity/naturalscene%20content.xlsx)). All the areas performed above chance (50%) and the categorization performance was similar for all areas including V1.[see Natural Image Categorization IPython Notebook](https://github.com/kachiO/ipython-notebooks/blob/master/mouse%20natural%20images%20identity/Natural%20Scene%20Categorization.ipynb)
@@ -88,8 +106,7 @@ In a future extension of the project, I could assign image categories using more
 <center>
 <figure>
     <img src="/assets/blog/natural_image_identity/binary_categorization_accuracy.png" height="400" title="Animal vs Non-animal  Categorization Performance"> <figcaption>Fig.5 Animal vs. Non Animal Categorization Performance</figcaption>
-   
-</figure>
+ </figure>
  </center>
 
 <h1>Discussion</h1>
