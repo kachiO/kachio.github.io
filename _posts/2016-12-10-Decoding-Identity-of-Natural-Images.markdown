@@ -15,10 +15,8 @@ Mice are relatively [new players to the visual neuroscience game](http://www.nat
 
 I set out on a data mission to investigate whether neurons in mouse visual cortex could linearly readout (i.e. discriminate) the identity of natural images.
 
-<h3>Skip to relevant IPython Notebooks: </h3> [Here](https://github.com/kachiO/ipython-notebooks/tree/master/mouse%20natural%20images%20identity)
 
 <h1>Methods & Data</h1>
-
 Mice were presented with a total of 118 natural scenes. Each scene was presented for 250mss and randomly repeated 50 times, one immediately after the other with no blank screen in between. (I thought this was a bit unusual that they would present the scenes one right after the other without a blank screen in between. Maybe they were worried about stimulus onset transients?) A blank screen, however, was presented after ever 100 scenes. More details about the experimental procedures are discussed in the [technical whitepaper](http://help.brain-map.org/display/observatory/Documentation).
 
 I had to do a bit of data wrangling to extract and save the responses from different brain areas, cell types, and scenes ([see Download Dataset IPython Notebook](https://github.com/kachiO/ipython-notebooks/blob/master/mouse%20natural%20images%20identity/download%20multiple%20datasets.ipynb)). I created a matrix, _XT_, of size _n_ x _c_ x _t_  where n = number of trials, c = number of cells in a visual area (or cell type), and t = time (or frames).This matrix was created for each visual area. The number of cells per area were ranged between 2157 (PM) to 4189 (V1) (see table below). There were 5900 trials total (118 images, 50 repeats each). Blank stimulus trials were excluded. The total number of frames included per cell was 21, which included 7 frames pre-stimulus, 7 frames during stimulus, and 7 frames post-stimulus. Approximately 7 imaging frames were acquired per 250ms. The analyses in this project were done using the relative changes in fluorescence (delta F/F) as the neuronal response instead of spikes.
@@ -128,3 +126,4 @@ Myers & Kreiman - [Tutorial on Pattern Classification](http://klab.tch.harvard.e
 <h2>Thanks to:</h2>
 Sashank Pisupati, Arka Banerjee, Matt Kaufman, and Anne Churchland for helpful discussions and suggestions. And also to the [Allen Institute](alleninstitute.org) for acquiring and curating this awesome dataset.
 
+###[Relevant IPython Notebooks](https://github.com/kachiO/ipython-notebooks/tree/master/mouse%20natural%20images%20identity)
