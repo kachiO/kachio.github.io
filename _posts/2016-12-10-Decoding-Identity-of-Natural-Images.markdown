@@ -15,6 +15,8 @@ Mice are relatively [new players to the visual neuroscience game](http://www.nat
 
 I set out on a data mission to investigate whether neurons in mouse visual cortex could linearly readout (i.e. discriminate) the identity of natural images.
 
+<h3>Skip to relevant IPython Notebooks: </h3> [Here](https://github.com/kachiO/ipython-notebooks/tree/master/mouse%20natural%20images%20identity)
+
 <h1>Methods & Data</h1>
 
 Mice were presented with a total of 118 natural scenes. Each scene was presented for 250mss and randomly repeated 50 times, one immediately after the other with no blank screen in between. (I thought this was a bit unusual that they would present the scenes one right after the other without a blank screen in between. Maybe they were worried about stimulus onset transients?) A blank screen, however, was presented after ever 100 scenes. More details about the experimental procedures are discussed in the [technical whitepaper](http://help.brain-map.org/display/observatory/Documentation).
@@ -126,4 +128,3 @@ Myers & Kreiman - [Tutorial on Pattern Classification](http://klab.tch.harvard.e
 <h2>Thanks to:</h2>
 Sashank Pisupati, Arka Banerjee, Matt Kaufman, and Anne Churchland for helpful discussions and suggestions. And also to the [Allen Institute](alleninstitute.org) for acquiring and curating this awesome dataset.
 
-  
