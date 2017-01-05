@@ -91,7 +91,7 @@ From the normalized confusion matrix, you will notice that there is a close agre
 <h2>Natural Image Identity Performance Accuracy Across Time </h2>
 The next question I asked was whether different visual areas might achieve higher accuracy at different times from the stimulus onset. I found three ways to approach this question.
 
-The first approach (a) To evaluate the performance of the classifier across time, I trained The decoder using the mean response from 200-300ms post-stimulus and tested the classification accuracy using the activity at each time point (or frame). The second approach (b) was to take a single frame, approximately 200ms post-stimulus, to train a classifier and compute the cross-validated test accuracy for each frame. This worked surprisingly well that the neural activity within a single frame (approximately 30ms) achieved high prediction accuracy, comparable to using the average activity between a larger time window of 100ms. 
+The first approach (a) To evaluate the performance of the classifier across time, I trained the decoder using the mean response from 200-300ms post-stimulus and tested the classification accuracy using the activity at each time point (or frame). The second approach (b) was to take a single frame, approximately 200ms post-stimulus, to train a classifier and compute the cross-validated test accuracy for each frame. This worked surprisingly well, i.e. that the neural activity within a single frame (approximately 30ms) achieved high prediction accuracy, comparable to using the average activity between a larger time window of 100ms. 
 
 <center>
 <figure>
