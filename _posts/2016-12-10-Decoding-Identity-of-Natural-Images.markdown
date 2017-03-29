@@ -89,13 +89,11 @@ From the normalized confusion matrix, you will notice that there is a close agre
 </center>
 
 <h2>Natural Image Identity Performance Accuracy Across Time </h2>
-The next question I asked was whether different visual areas might achieve higher accuracy at different times from the stimulus onset. I found three ways to approach this question.
-
-The first approach (a) To evaluate the performance of the classifier across time, I trained the decoder using the mean response from 200-300ms post-stimulus and tested the classification accuracy using the activity at each time point (or frame). The second approach (b) was to take a single frame, approximately 200ms post-stimulus, to train a classifier and compute the cross-validated test accuracy for each frame. This worked surprisingly well, i.e. that the neural activity within a single frame (approximately 30ms) achieved high prediction accuracy, comparable to using the average activity between a larger time window of 100ms. 
+The next question I asked was whether different visual areas might achieve higher accuracy at different times from the stimulus onset. To evaluate the performance of the classifier across time, I trained the decoder using the mean response from 200-300ms post-stimulus and tested the classification accuracy at each time point (Figure 4a). The second approach was to independently train the classifier and test the accuracy at each point in time (Figure 4b).  Both approaches yielded identical results, with V1 exhibiting greater test accuracy over time. 
 
 <center>
 <figure>
-    <img src="/assets/blog/natural_image_identity/accuracy_across_time_all2.png" height="380" title="Performance across time"><figcaption>Fig.4 Decoding Test Accuracy Across Time (a) trained with average response frames between 200-300ms (b) trained with single frame at approximately 200ms post stimulus onset</figcaption>
+    <img src="/assets/blog/natural_image_identity/accuracy_across_time.png" height="380" title="Performance across time"><figcaption>Fig.4 Decoding Test Accuracy Across Time for classifier (a) trained with average response activity between 200-300ms post stimulus onset (b) trained with activity at each point in time</figcaption>
 </figure>
 </center>
 
