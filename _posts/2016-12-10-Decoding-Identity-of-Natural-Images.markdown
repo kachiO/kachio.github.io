@@ -53,7 +53,7 @@ To measure performance on identifying a natural image, I trained a linear suppor
 <h1>Results</h1>
 
 <h2>Primary Visual Cortex (V1) Achieved Highest Performance on Natural Image Identity Task</h2>
-Although all the visual areas performed well above chance (0.85%), V1 exhibited the highest performance (>75%) in linearly classifying the natural images, followed by area LM (>50%). Areas PM and LM performed similarly (> 30%) to each other.
+All the visual areas performed well above chance (0.85%) on the identity task. Primary visual cortex (V1) exhibited the highest performance (>75%) in linearly classifying the natural images, followed by area LM (>50%). Areas AL and PM performed similarly (> 30%) to each other.
 
 <center>
 <figure>
