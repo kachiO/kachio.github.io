@@ -5,7 +5,6 @@ comments: true
 date: 2017-12-17
 excerpt: "Kaggle Credit Card Fraud Detection using Linear SVM, One Class SVM, and Autoencoder"
 mathjax: true
-latex: true
 ---
 
 ## [View notebook via nbviewer](https://nbviewer.jupyter.org/github/kachiO/ipython-notebooks/blob/master/CreditFraud-report.ipynb)
