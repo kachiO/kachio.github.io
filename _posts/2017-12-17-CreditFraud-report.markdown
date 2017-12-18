@@ -30,11 +30,11 @@ Given the severe class imbalance (0.17% of fraudulent transactions), rather than
 
 Precision measures the classifier's ability not to label a negative sample as positive:
 
-*Precision* = $\frac{TP}{TP+FP}$
+*Precision* = $$\frac{TP}{TP+FP}$$
 
 Recall measures the classifier's ability to find all the positive samples of a class, in other words the true positive rate:
 
-*Recall* = $\frac{TP}{TP+FN}$
+*Recall* = $$\frac{TP}{TP+FN}$$
 
 where *TP* is true positive, *FN* false negative, and *FP* false positive.
 
