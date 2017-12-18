@@ -7,6 +7,8 @@ excerpt: "Kaggle Credit Card Fraud Detection using Linear SVM, One Class SVM, an
 mathjax: true
 ---
 
+## [View notebook via nbviewer](https://nbviewer.jupyter.org/github/kachiO/ipython-notebooks/blob/master/CreditFraud-report.ipynb)
+
 # Kaggle Credit Card Fraud Detection Dataset
 The datasets contains transactions made by credit cards in September 2013 by european cardholders. This dataset presents transactions that occurred in two days, where we have 492 frauds out of 284,807 transactions.
 
