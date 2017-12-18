@@ -42,4 +42,4 @@ For fraud detection, I want a model with high recall, i.e. a model that captures
 
 The goal of this exercise was to detect fraud transactions in a public dataset. I compared the performance (recall score) of three machine learning methods: linear SVM, one class SVM, and an autoencoder. The autoencoder model achieved the highest recall score, suggesting that an autoencoder neural network model could be useful and novel approach to fraud (and perhaps anomaly) direction.
 
-## [View notebook via nbviewer] (https://nbviewer.jupyter.org/github/kachiO/ipython-notebooks/blob/master/CreditFraud-report.ipynb)
+## [View notebook via nbviewer](https://nbviewer.jupyter.org/github/kachiO/ipython-notebooks/blob/master/CreditFraud-report.ipynb)
